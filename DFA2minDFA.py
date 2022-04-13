@@ -192,7 +192,7 @@ def NFA2DFA(head, alpha_list, draw=True):
         node_list.append(t)
         stack.pop()
         for edge in t.next:
-            if edge.char == '_' and edge.target_state.id not in s:
+            if edge.char == '_' and str(edge.target_state.id) not in s:
                 stack.append(edge.target_state)
     s = sorted(s)
     s = ' '.join(s)  # 因列表无法hash 把key转为string
