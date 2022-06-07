@@ -1,4 +1,3 @@
-from turtle import shape
 from graphviz import Digraph
 from RE2RET import REToRPN
 from collections import deque
